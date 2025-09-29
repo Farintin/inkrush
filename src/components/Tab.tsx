@@ -1,13 +1,11 @@
 // src/features/feed/FeedPage.tsx
-import type { PropsWithChildren, CSSProperties } from "react";
-
-type TabProps = PropsWithChildren<{
-  className: string;
-  style?: CSSProperties;
-}>;
+import type { ComponentProps } from "@/types";
+type TabProps = ComponentProps;
 
 export default function Tab({ children, className, ...restProps }: TabProps) {
-  className = `h-full w-full bg-blue-500 ${className}`;
+  className = `comp-Tab h-full w-full overflow-auto
+   bg-blue-500 
+  ${className}`;
   return (
     <div className={className} {...restProps}>
       {children}
